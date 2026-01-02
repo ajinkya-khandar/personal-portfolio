@@ -1,0 +1,108 @@
+.brand-wrap {
+    margin-top: -75px;
+    border-radius: 100px;
+    padding: 64px 14px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    z-index: 2;
+    box-shadow: 0px 20px 50px rgba(153, 153, 153, 0.2);
+    border: 1px solid rgba(214, 214, 214, 0.11);
+}
+
+/* Track */
+.owl-stage {
+    display: flex;
+    transition: transform 0.25s ease;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Single item */
+.owl-item {
+  font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+     font-size: 26px;
+    font-weight: 900;
+    width: 200px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    /* filter: grayscale(100%); */
+    opacity: .5;
+    user-select: none;
+    text-align: center;
+}
+
+.owl-item:nth-child(1):hover {
+    color: #e63946;
+    /* Red */
+}
+
+.owl-item:nth-child(2):hover {
+    color: #457b9d;
+    /* Blue */
+}
+
+.owl-item:nth-child(3):hover {
+    color: #2a9d8f;
+    /* Teal */
+}
+
+.owl-item:nth-child(4):hover {
+    color: #f4a261;
+    /* Orange */
+}
+
+.owl-item:nth-child(5):hover {
+    color: #e9c46a;
+    /* Yellow */
+}
+
+.owl-item:nth-child(6):hover {
+    color: #9d4edd;
+    /* Purple */
+}
+
+.owl-item:nth-child(7):hover {
+    color: #ff006e;
+    /* Pink */
+}
+
+.owl-item:nth-child(8):hover {
+    color: #00b4d8;
+    /* Sky Blue */
+}
+
+.owl-item:nth-child(9):hover {
+    color: #6a994e;
+    /* Green */
+}
+
+.owl-item:nth-child(10):hover {
+    color: #ff9f1c;
+    /* Soft Orange */
+}
+
+.owl-item:nth-child(11):hover {
+    color: #d62828;
+    /* Deep Red */
+}
+
+.owl-item:nth-child(12):hover {
+    color: #3a0ca3;
+    /* Dark Purple */
+}
+
+.owl-item:nth-child(13):hover {
+    color: #7209b7;
+    /* Violet */
+}
+
+.owl-item:nth-child(14):hover {
+    color: #118ab2;
+    /* Cool Blue */
+}

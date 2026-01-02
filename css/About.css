@@ -1,0 +1,168 @@
+.section-gap {
+    padding: 150px 0;
+}
+
+.section-title h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 70px;
+    text-transform: capitalize;
+    position: relative;
+    line-height: 44px;
+}
+
+.section-desc {
+    color: #777777;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.about-right {
+    max-width: 70%;
+}
+
+.section-title h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -35px;
+    width: 10px;
+    height: 10px;
+    background: #e45447;
+    border-radius: 7px;
+}
+
+.section-title h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -31px;
+    width: 100px;
+    height: 2px;
+    background: #e45447;
+}
+
+/* Extra Small (mobile) */
+@media (width <=734px) {
+    .section-gap {
+        /* border: 2px solid #ff3b30; */
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .about-right {
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+
+    .section-gap {
+        padding: 60px 0;
+    }
+
+    .section-title h2:after {
+        bottom: -11px;
+    }
+
+    .section-title h2:before {
+        bottom: -15px;
+    }
+}
+
+/* Small (portrait tablet) */
+@media (734px < width <=1068px) {
+    .section-gap {
+        /* border: 2px solid purple; */
+    }
+
+    .about-right {
+        max-width: 100%;
+    }
+
+    .section-gap {
+        padding: 60px 0;
+    }
+
+    .section-title h2:after {
+        bottom: -11px;
+    }
+
+    .section-title h2:before {
+        bottom: -15px;
+    }
+
+    .section-title h2 {
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+    .section-desc {
+        font-size: 15px;
+    }
+}
+
+/* Medium (tablet landscape / small laptop) */
+@media (1068px < width <=1280px) {
+    .section-gap {
+        /* border: 2px solid #ffcc00; */
+    }
+
+    .about-right {
+        max-width: 80%;
+    }
+
+    .section-title h2 {
+        font-size: 50px;
+    }
+
+}
+
+/* Large desktop */
+@media (1280px < width <=1440px) {
+    .section-gap {
+        /* border: 4px solid pink; */
+    }
+
+
+    .section-title h2 {
+        font-size: 50px;
+    }
+
+    .section-desc {
+        font-size: 18px;
+    }
+}
+
+/* X-Large desktop */
+@media (1440px < width <=1920px) {
+    .section-gap {
+        /* border: 4px solid red; */
+    }
+
+    .section-title h2 {
+        font-size: 60px;
+    }
+
+    .section-desc {
+        font-size: 20px;
+    }
+}
+
+/* Ultra wide / 4K+ */
+@media (width >=1921px) {
+    .section-gap {
+        /* border: 4px solid green; */
+    }
+
+    .section-title h2 {
+        font-size: 60px;
+    }
+
+    .section-desc {
+        font-size: 20px;
+    }
+}
