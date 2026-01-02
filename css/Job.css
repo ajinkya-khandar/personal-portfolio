@@ -113,7 +113,11 @@
     }
 
     .job-footer {
-        font-size: 15px;
+        font-size: 12px;
+    }
+    
+    .job-desc p {
+        font-size: 12px;
     }
 
     .section-title p {
@@ -129,7 +133,8 @@
     }
 
     .primary-btn {
-        font-size: 15px;
+        font-size: 12px;
+        padding: 0px 30px;
     }
 }
 
@@ -144,6 +149,10 @@
     }
 
     .job-footer {
+        font-size: 15px;
+    }
+
+    .job-desc p {
         font-size: 15px;
     }
 

@@ -23,10 +23,10 @@
 
 /* Single item */
 .owl-item {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-style: normal;   
-     font-size: 26px;
+    font-style: normal;
+    font-size: 26px;
     font-weight: 900;
     width: 200px;
     flex-shrink: 0;
@@ -105,4 +105,57 @@
 .owl-item:nth-child(14):hover {
     color: #118ab2;
     /* Cool Blue */
+}
+
+@media (width <=734px) {
+    .brand-wrap {
+        /* border: 2px solid red; */
+    }
+
+    .owl-item {
+        width: 100%;
+    }
+}
+
+/* Small (portrait tablet) */
+@media (734px < width <=1068px) {
+    .brand-wrap {
+        /* border: 2px solid purple; */
+    }
+
+    .owl-item {
+        width: 50%;
+    }
+}
+
+/* Medium (tablet landscape / small laptop) */
+@media (1068px < width <=1280px) {
+    .brand-wrap {
+        /* border: 2px solid #ffcc00; */
+    }
+
+    .owl-item {
+        width: 220px;
+    }
+}
+
+/* Large desktop */
+@media (1280px < width <=1440px) {
+    .brand-wrap {
+        /* border: 4px solid pink; */
+    }
+}
+
+/* X-Large desktop */
+@media (1440px < width <=1920px) {
+    .brand-wrap {
+        /* border: 4px solid red; */
+    }
+}
+
+/* Ultra wide / 4K+ */
+@media (width >=1921px) {
+    .brand-wrap {
+        /* border: 4px solid green; */
+    }
 }

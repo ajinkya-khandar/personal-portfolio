@@ -238,13 +238,13 @@ a {
 
 
     .banner-img img {
-        max-width: 70%;
+        max-width: 60%;
     }
 
     .banner-img {
         position: relative;
         text-align: center;
-        bottom: -50px;
+        bottom: -56px;
     }
 
     .banner-content .designation {
