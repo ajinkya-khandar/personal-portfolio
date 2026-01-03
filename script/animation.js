@@ -1,34 +1,76 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const stage = document.querySelector(".owl-stage");
-    const items = document.querySelectorAll(".owl-item");
-    const itemWidth = items[0].offsetWidth + 20; // include right gap
-    let index = 0;
+  const stage = document.querySelector(".owl-stage");
+  const items = document.querySelectorAll(".owl-item");
+  const itemWidth = items[0].offsetWidth + 20; // include right gap
+  let index = 0;
 
-    // clone for seamless loop
-    stage.innerHTML += stage.innerHTML;
+  // clone for seamless loop
+  stage.innerHTML += stage.innerHTML;
 
-    setInterval(() => {
-        index++;
+  setInterval(() => {
+    index++;
 
-        stage.style.transition = "transform 0.25s ease";
-        stage.style.transform = `translate3d(-${index * itemWidth}px, 0, 0)`;
+    stage.style.transition = "transform 0.25s ease";
+    stage.style.transform = `translate3d(-${index * itemWidth}px, 0, 0)`;
 
-        // Reset smoothly when reaching halfway (after clone)
-        if (index >= items.length) {
-            setTimeout(() => {
-                stage.style.transition = "none";
-                stage.style.transform = "translate3d(0,0,0)";
-                index = 0;
-            }, 260);
-        }
-    }, 5000); // 1 second per slide
+    // Reset smoothly when reaching halfway (after clone)
+    if (index >= items.length) {
+      setTimeout(() => {
+        stage.style.transition = "none";
+        stage.style.transform = "translate3d(0,0,0)";
+        index = 0;
+      }, 260);
+    }
+  }, 5000); // 1 second per slide
 });
 
- document.addEventListener('DOMContentLoaded', () => {
-    appendTotalExperience(document.getElementById('exp1'));
-    appendTotalExperience(document.getElementById('exp2'));
-    document.getElementById('year').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  appendTotalExperience(document.getElementById('exp1'));
+  appendTotalExperience(document.getElementById('exp2'));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const slider = document.querySelector('.brand-wrap');
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
   });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // scroll speed
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // Touch support (mobile)
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+});
 
 function appendTotalExperience(pElement) {
   if (!pElement) return;
